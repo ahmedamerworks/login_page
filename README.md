@@ -1,6 +1,8 @@
 # Basic Login Page
 
-This is supposed to be a basic login page coded with simple HTML and Tailwind CSS (the current JS file is empty).
+This is supposed to be a basic login page coded with simple HTML and CSS (the current JS file is empty).
+
+For the background video -> I used a video I found on pexels.com by Rostislav Uzunov.
 
 Later down the line I want to code a functioning signup page with a database for users and a working login button using the JS script found in this github.
 

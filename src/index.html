@@ -3,40 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>V287-login</title>
     <link rel="stylesheet" href="basic.css" />
   </head>
   <body>
-    <video autoplay muted loop poster="../data/bg-still.jpg">
-      <source src="../data/bg-video2.mp4" />
-    </video>
+    <video
+      id="video-bg"
+      muted
+      autoplay
+      loop
+      src="../data/bg-video2.mp4"
+    ></video>
     <header>
-      <h1>V287</h1>
+      <h1>Portal V287</h1>
     </header>
     <main>
-      <button type="button">Click Here</button>
-
-      <form class="login-form">
-        <span class="login-form_input">
-          <label for="username">Username</label>
-          <input type="text" class="input" id="username" required />
-        </span>
-        <span class="login-form_input">
-          <label for="password">Password</label>
-          <input type="password" class="input" id="password" required />
-        </span>
-        <div>
-          <label for="remember-me"
-            ><input type="checkbox" id="remember-me" />Remember Me</label
-          >
-        </div>
-        <button type="button">Sign In</button>
-      </form>
+      <button type="button" onclick="">Click Me</button>
+      <div class="form-container">
+        <input class="form-input" type="text" placeholder="Username!" />
+        <input class="form-input" type="password" placeholder="Password!" />
+      </div>
     </main>
     <footer>
-      <h5 class="footer-link">All code written by Ahmed Amer</h5>
+      <p>V287</p>
+      <a href="https://www.linkedin.com/in/ahmed-amer-8b7524262/"
+        >All code written by Ahmed Amer</a
+      >
     </footer>
-    <script src="index.js"></script>
   </body>
 </html>
