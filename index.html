@@ -12,6 +12,7 @@
     />
   </head>
   <body>
+    <!-- Looped background -->
     <video
       id="video-bg"
       muted
@@ -19,33 +20,109 @@
       loop
       src="../data/bg-video2.mp4"
     ></video>
+    <!-- Animated title -->
     <header>
       <h1>Portal V287</h1>
       <h1>Portal V287</h1>
     </header>
     <main>
-      <button class="form-btn" type="button" onclick="formRender()">
+      <!-- Button displays login form -->
+      <button
+        class="btn"
+        id="form-btn"
+        type="button"
+        onclick="toggleDisplay('main-form_container', 'form-btn')"
+      >
         Traverse
         <span class="material-symbols-outlined"> arrow_downward_alt </span>
       </button>
-      <div class="form-container">
+      <!-- Main login form -->
+      <div id="main-form_container" class="form-container">
         <form class="main-form">
-          <label for="email">Email Address</label>
-          <input
-            class="form-input"
-            type="email"
-            placeholder="Enter email"
-            id="email"
-          />
-          <label for="password">Password</label>
-          <input
-            class="form-input"
-            type="password"
-            placeholder="Enter password"
-            id="password"
-          />
+          <div class="main-form_div">
+            <label for="email"></label>
+            <span class="toggle-icon material-symbols-outlined bookmark"
+              >person </span
+            ><input
+              class="form-input"
+              type="email"
+              placeholder="Enter email"
+              id="email"
+            />
+          </div>
+          <div class="main-form_div">
+            <label for="password"></label>
+            <span class="toggle-icon material-symbols-outlined key">lock</span
+            ><input
+              class="form-input"
+              type="password"
+              placeholder="Enter password"
+              id="password"
+            />
+          </div>
+          <div class="register">
+            <button
+              type="button"
+              class="btn"
+              id="register-btn"
+              onclick="toggleDisplay('register-form_container', 'main-form_container')"
+            >
+              Register
+            </button>
+          </div>
+          <div class="sign-in">
+            <button type="button" class="btn" id="sign-in_btn">
+              Sign In
+              <span class="material-symbols-outlined login">login</span>
+            </button>
+          </div>
         </form>
       </div>
+      <!-- Registration form -->
+      <div class="form-container" id="register-form_container">
+        <form class="main-form">
+          <div class="main-form_div">
+            <label for="email"></label>
+            <span class="toggle-icon material-symbols-outlined bookmark"
+              >person </span
+            ><input
+              class="form-input"
+              type="email"
+              placeholder="Enter email"
+              id="email"
+            />
+          </div>
+          <div class="main-form_div">
+            <label for="password"></label>
+            <span class="toggle-icon material-symbols-outlined key"
+              >lock_open</span
+            ><input
+              class="form-input"
+              type="password"
+              placeholder="Enter password"
+              id="password"
+            />
+          </div>
+          <div class="main-form_div">
+            <label for="repeat-password"></label>
+            <span class="toggle-icon material-symbols-outlined key">lock</span
+            ><input
+              class="form-input"
+              type="password"
+              placeholder="Confirm password"
+              id="repeat-password"
+            />
+          </div>
+          <div>
+            <button type="button" class="btn" id="complete-btn">
+              Complete
+              <span class="material-symbols-outlined login">how_to_reg</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Signed in page -->
+      <div class="form-container" id="signed-in_page"></div>
     </main>
     <footer>
       <!-- <p>V287</p> -->
@@ -53,5 +130,13 @@
         >All code written by Ahmed Amer</a
       >
     </footer>
+    <script>
+      function toggleDisplay(elementId, element2Id) {
+        const form = document.getElementById(elementId);
+        const btn = document.getElementById(element2Id);
+        form.style.display = "flex";
+        btn.style.display = "none";
+      }
+    </script>
   </body>
 </html>

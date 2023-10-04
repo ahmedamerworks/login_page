@@ -7,7 +7,7 @@
   --green-3: #ddf088;
 
   --blue: rgb(4, 73, 127);
-  --light-gray: #b0c0c5;
+  --light-gray: rgb(176, 192, 197);
   --dark-gray: #244454;
 }
 
@@ -32,52 +32,105 @@ header {
 
 main {
   display: flex;
+  flex-direction: column;
   height: 65vh;
   justify-content: center;
   align-items: center;
 }
 
+.btn {
+  background-color: var(--blue);
+  outline: none;
+  border: none;
+  box-shadow: -2px 4px 0 black;
+  transition: 0.4s;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  opacity: 95%;
+}
+
+.btn span {
+  transform: translateY(5px);
+  transition: 0.4s;
+}
+
+#form-btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: x-large;
+}
+
+#sign-in_btn,
+#register-btn,
+#complete-btn {
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+
+#form-btn:active,
+#sign-in_btn:active,
+#register-btn:active {
+  box-shadow: none;
+  background: var(--green-2);
+  transform: translateY(5px);
+}
+
+#form-btn:active span {
+  transform: translateY(8px);
+}
+
 .form-container {
-  background-color: rgba(123, 175, 213, 0.9);
+  background-color: rgb(176, 192, 197, 0.75);
   height: 30vh;
   border: 3px solid;
   border-color: var(--dark-gray);
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 4%;
-  flex-direction: column;
-  align-items: center;
+  background-blend-mode: lighten;
+  box-shadow: -3px 5px 0 black;
   display: none;
 }
 
-.form-btn {
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.main-form_div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
   background-color: var(--blue);
-  padding: 10px 20px;
-  font-size: x-large;
-  border-radius: 40px;
+  padding-left: 5px;
+
+  padding-bottom: 3px;
+  border-radius: 20px;
+}
+
+.form-input {
+  border-color: var(--blue);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  box-shadow: -1px 2px 0 black;
   outline: none;
-  border: none;
-  box-shadow: -3px 5px 0 black;
-  transition: 0.4s;
-  cursor: pointer;
-  text-align: center;
-  opacity: 95%;
-  top: 50%;
-  left: 50%;
-}
-
-.form-btn span {
-  transform: translateY(5px);
-  font-size: 25px;
   transition: 0.4s;
 }
 
-.form-btn:active {
-  box-shadow: none;
-  background: var(--green-2);
+.form-input:focus {
+  background-color: var(--dark-gray);
+  color: var(--green-2);
 }
 
-.form-btn:active span {
-  transform: translateY(10px);
+.toggle-icon {
+  margin: 0%;
+  padding: 0%;
 }
 
 footer {
